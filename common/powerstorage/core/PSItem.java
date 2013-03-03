@@ -11,7 +11,7 @@ public class PSItem extends Item{
 
 	public PSItem(int i) {
 		super(i);
-		setTextureFile(CommonProxy.ITEMS_PNG);
+		setTextureFile(CommonProxy.TEXTURE_ITEMS);
 	}
 
 	@Override

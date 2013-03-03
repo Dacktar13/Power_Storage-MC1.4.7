@@ -18,6 +18,6 @@ public class MercuryIngot extends Item {
 	}
 
 	public String getTextureFile() {
-		return CommonProxy.ITEMS_PNG;
+		return CommonProxy.TEXTURE_ITEMS;
 	}
 }

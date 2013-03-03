@@ -8,7 +8,7 @@ public class CommonProxy {
 	public static String TEXTURE_PATH_ENTITIES = "/gfx/powerstorage/entities";
 
 	public static String TEXTURE_BLOCKS = TEXTURE_PATH_BLOCKS + "/blocks.png";
-	public static String TEXTURE_ITEMS = TEXTURE_PATH_BLOCKS + "/items.png";
+	public static String TEXTURE_ITEMS = TEXTURE_PATH_ITEMS + "/items.png";
 	public static String TEXTURE_ICONS = TEXTURE_PATH_GUI + "/icons.png";
 	public static String TEXTURE_TRIGGERS = TEXTURE_PATH_GUI + "/triggers.png";
 

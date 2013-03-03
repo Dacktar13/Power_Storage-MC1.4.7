@@ -21,7 +21,7 @@ import net.minecraft.creativetab.CreativeTabs;
         
         @Override
         public String getTextureFile () {
-                return CommonProxy.BLOCK_PNG;
+                return CommonProxy.TEXTURE_BLOCKS;
         }
         
         public int idDropped(int par1, Random random, int par2) {
