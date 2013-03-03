@@ -1,0 +1,8 @@
+
+#0.1.0
+
+- Updated name to PowerStorage
+- Updated to new development structure.
+- Seperated classes into grouped packages
+- Updated texture lookup, to allow for easer future updates of textures.
+

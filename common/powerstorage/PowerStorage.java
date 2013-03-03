@@ -44,7 +44,7 @@ import powerstorage.core.MercuryIngot;
 import powerstorage.factory.Condenser;
 import powerstorage.factory.MercuryCubeEmpty;
 
-@Mod(modid = "PowerStorage", name = "Power Storage", version = "0.0.1")
+@Mod(modid = "PowerStorage", name = "Power Storage", version = "0.1.0")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class PowerStorage {
 
