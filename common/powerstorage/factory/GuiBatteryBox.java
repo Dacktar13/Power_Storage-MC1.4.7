@@ -19,7 +19,7 @@ package powerstorage.factory;
 	        protected void drawGuiContainerForegroundLayer(int param1, int param2) {
 	                //draw text and stuff here
 	                //the parameters for drawString are: string, x, y, color
-	                fontRenderer.drawString("Tiny", 8, 6, 4210752);
+	                fontRenderer.drawString("Battery Box", 8, 6, 4210752);
 	                //draws "Inventory" or your regional equivalent
 	                fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), 8, ySize - 96 + 2, 4210752);
 	        }
