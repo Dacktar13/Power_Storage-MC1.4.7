@@ -1,10 +1,7 @@
 package powerstorage.factory;
 
-import buildcraft.core.BlockBuildCraft;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import java.util.Random;
-
 import powerstorage.CommonProxy;
 import powerstorage.PowerStorage;
 import net.minecraft.block.BlockContainer;
@@ -79,7 +76,7 @@ public  class BatteryBox extends BlockContainer {
                                                 new ItemStack(item.itemID, item.stackSize, item.getItemDamage()));
 
                                 if (item.hasTagCompound()) {
-                                        entityItem.func_92014_d().setTagCompound((NBTTagCompound) item.getTagCompound().copy());
+                                        entityItem.getEntityItem().setTagCompound((NBTTagCompound) item.getTagCompound().copy());
                                 }
 
                                 float factor = 0.05F;
