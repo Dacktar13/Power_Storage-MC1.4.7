@@ -181,6 +181,7 @@ public class PowerStorage {
 		ItemStack GoldPowerPipeStack = new ItemStack(
 				BuildCraftTransport.pipePowerGold);
 		ItemStack mercuryBucketStack = new ItemStack(bucketMercury);
+		ItemStack emptyBucketStack = new ItemStack(Item.bucketEmpty);
 		ItemStack ingotIronStack = new ItemStack(Item.ingotIron);
 
 		// Battery Box
@@ -203,6 +204,8 @@ public class PowerStorage {
 		GameRegistry.addSmelting(mercuryOreID, mercuryIngotStack, 0.8F);
 		GameRegistry.addRecipe(new ItemStack(bucketMercury, 1), "   ", "imi", " i ",
 				'i', ingotIronStack, 'm', mercuryIngotStack);
+		GameRegistry.addRecipe(new ItemStack(bucketMercury, 1), "   ", " m ", " i ",
+				'i', emptyBucketStack, 'm', mercuryIngotStack);
 
 		// Mercury Pipes
 		GameRegistry.addRecipe(new ItemStack(mercuryPipe), "   ", "gmg", "   ",
