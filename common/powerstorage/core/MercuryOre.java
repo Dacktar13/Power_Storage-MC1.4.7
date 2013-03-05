@@ -24,6 +24,7 @@ import net.minecraft.creativetab.CreativeTabs;
                 return CommonProxy.TEXTURE_BLOCKS;
         }
         
+        @Override
         public int idDropped(int par1, Random random, int par2) {
                 return PowerStorage.mercuryOre.blockID;
         }
