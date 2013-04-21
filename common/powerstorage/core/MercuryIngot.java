@@ -12,8 +12,7 @@ public class MercuryIngot extends Item {
 		// Constructor Config
 		maxStackSize = 64;
         setCreativeTab(CreativeTabs.tabMisc);
-        setIconIndex(0);
-        setItemName("mercuryIngot");
+        setUnlocalizedName("mercuryIngot");
 
 	}
 

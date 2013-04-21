@@ -17,9 +17,9 @@
 
     <property name="clientsrc.dir"       value="${mcp.dir}/src/minecraft"/>
           
-	<property name="mc.version"			 value="1.4.7"/>
-    <property name="forge.version"		 value="6.6.2.534"/>
-    <property name="bcpowerstorage.version"          value="0.1.0"/>
+	<property name="mc.version"			 value="1.5"/>
+    <property name="forge.version"		 value="7.7.0.582"/>
+    <property name="bcpowerstorage.version"          value="0.1.1"/>
     <property name="bcpowerstorage.version.full"     value="${powerstorage.version}"/>
     
     <echo message="Starting build for ${powerstorage.version.full}"/>

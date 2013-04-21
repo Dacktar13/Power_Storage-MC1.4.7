@@ -1,6 +1,5 @@
 package powerstorage.liquid;
 
-import powerstorage.CommonProxy;
 import powerstorage.PowerStorage;
 import net.minecraft.item.ItemBucket;
 import net.minecraft.item.ItemStack;
@@ -10,17 +9,14 @@ public class ItemBucketMercury extends ItemBucket {
 
 	public ItemBucketMercury(int i) {
 		super(i, PowerStorage.mercuryMoving.blockID);
-		iconIndex = 1;
+		
 	}
 
 	@Override
 	public String getItemDisplayName(ItemStack itemstack) {
-		return StringUtil.localize(getItemNameIS(itemstack));
+		return StringUtil.localize(getItemDisplayName(itemstack));
 	}
 
-	@Override
-	public String getTextureFile() {
-		return CommonProxy.TEXTURE_ITEMS;
-	}
+	
 
 }

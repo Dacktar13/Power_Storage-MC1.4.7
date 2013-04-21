@@ -35,6 +35,7 @@ import powerstorage.factory.BatteryBox;
 import powerstorage.factory.MercuryPipe;
 import powerstorage.factory.GuiHandler;
 import powerstorage.factory.TileEntityBatteryBox;
+import powerstorage.lib.Reference;
 import powerstorage.liquid.BlockMercuryFlowing;
 import powerstorage.liquid.BlockMercuryStill;
 import powerstorage.liquid.ItemBucketMercury;
@@ -44,7 +45,7 @@ import powerstorage.core.MercuryIngot;
 import powerstorage.factory.Condenser;
 import powerstorage.factory.MercuryCubeEmpty;
 
-@Mod(modid = "PowerStorage", name = "Power Storage", version = "0.1.0")
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION_NUMBER)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class PowerStorage {
 
@@ -98,44 +99,44 @@ public class PowerStorage {
 		// Block creation
 		batteryBox = new BatteryBox(batteryBoxID, 1);
 
-		mercuryOre = new MercuryOre(mercuryOreID, 2, Material.iron)
-				.setResistance(10.0F).setBlockName("mercuryOre");
+		mercuryOre = new MercuryOre(mercuryOreID, Material.iron)
+				.setResistance(10.0F).setUnlocalizedName("mercuryOre");
 
 		mercuryPipe = buildcraft.BuildCraftTransport.createPipe(mercuryPipeID,
-				MercuryPipe.class, "Mercury Conductive Pipe", null, null, null);
+				MercuryPipe.class, "mercuryConductivePipe", null, null, null);
 
-		condenser = new Condenser(condenserID, 1, Material.iron)
+		condenser = new Condenser(condenserID, Material.iron)
 				.setHardness(10F).setResistance(10.0F)
 				.setStepSound(Block.soundGravelFootstep)
-				.setBlockName("condenser");
+				.setUnlocalizedName("condenser");
 
-		mercuryCubeEmpty = new MercuryCubeEmpty(mercuryCubeEmptyID, 4,
+		mercuryCubeEmpty = new MercuryCubeEmpty(mercuryCubeEmptyID, 
 				Material.iron).setHardness(10F).setResistance(10.0F)
 				.setStepSound(Block.soundGravelFootstep)
-				.setBlockName("mercuryCubeEmpty");
+				.setUnlocalizedName("mercuryCubeEmpty");
 
-		mercuryCubeFull = new MercuryCubeFull(mercuryCubeFullID, 5,
+		mercuryCubeFull = new MercuryCubeFull(mercuryCubeFullID, 
 				Material.iron).setHardness(10F).setResistance(10.0F)
 				.setStepSound(Block.soundGravelFootstep)
-				.setBlockName("mercuryCubeFull");
+				.setUnlocalizedName("mercuryCubeFull");
 
 		// Item Creation
 		mercuryIngot = new MercuryIngot(mercuryIngotID).setMaxStackSize(64)
-				.setCreativeTab(CreativeTabs.tabMisc).setIconIndex(2)
-				.setItemName("mercuryIngot");
+				.setCreativeTab(CreativeTabs.tabMisc)
+				.setUnlocalizedName("mercuryIngot");
 
 		// mercury liquid.
 		mercuryStill = (new BlockMercuryStill(mercuryStillId, Material.water))
-				.setBlockName("mercury").setLightValue(0.5F);
+				.setUnlocalizedName("mercurySource").setLightValue(0.5F);
 
 		mercuryMoving = (new BlockMercuryFlowing(mercuryMovingId,
-				Material.water)).setBlockName("mercury").setLightValue(0.5F);
+				Material.water)).setUnlocalizedName("mercuryFlowing").setLightValue(0.5F);
 
 		MinecraftForge.EVENT_BUS.register(new MercuryBucketHandler());
 
 		bucketMercury = new ItemBucketMercury(bucketMercuryId)
-				.setItemName("bucketMercury")
-				.setContainerItem(Item.bucketEmpty).setIconIndex(1)
+				.setUnlocalizedName("bucketMercury")
+				.setContainerItem(Item.bucketEmpty)
 				.setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
 		LanguageRegistry.addName(bucketMercury, "Mercury Bucket");
 
@@ -192,7 +193,7 @@ public class PowerStorage {
 
 		// Condenser
 		GameRegistry.addRecipe(new ItemStack(condenser), "sss", "tft", "GgG",
-				't', BuildCraftFactory.tankBlock, 'f', Block.stoneOvenIdle, 'G',
+				't', BuildCraftFactory.tankBlock, 'f', Block.furnaceIdle, 'G',
 				BuildCraftCore.goldGearItem, 's', stoneStack, 'g',
 				GoldPowerPipeStack);
 

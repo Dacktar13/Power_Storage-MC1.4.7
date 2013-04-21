@@ -2,7 +2,6 @@ package powerstorage.factory;
 
 import net.minecraft.block.material.Material;
 import java.util.Random;
-import powerstorage.CommonProxy;
 import powerstorage.PowerStorage;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.creativetab.CreativeTabs;
@@ -19,10 +18,10 @@ public  class BatteryBox extends BlockContainer {
 
 
 	public BatteryBox (int id, int texture) {
-        super(id, texture, Material.iron);
+        super(id, Material.iron);
         setHardness(10.0F);
         setResistance(10.0F);
-        setBlockName("batteryBox");
+        setUnlocalizedName("batteryBox");
         setCreativeTab(CreativeTabs.tabDecorations);
 	}
 	
@@ -30,11 +29,7 @@ public  class BatteryBox extends BlockContainer {
 	int sideTexture;
 
              
-        @Override
-        public String getTextureFile () {
-                return CommonProxy.TEXTURE_BLOCKS;
-               
-        }
+       
         
         @Override
         public boolean onBlockActivated(World world, int x, int y, int z,
