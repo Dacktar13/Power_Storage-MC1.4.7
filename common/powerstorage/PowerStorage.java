@@ -46,9 +46,7 @@ import powerstorage.factory.Condenser;
 import powerstorage.factory.MercuryCubeEmpty;
 
 /**
- * LetsMod
- * 
- * LetsMod
+ * PowerStorage
  * 
  * @author Dacktar
  * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
@@ -58,13 +56,13 @@ import powerstorage.factory.MercuryCubeEmpty;
 @Mod(
         modid = Reference.MOD_ID, 
         name = Reference.MOD_NAME, 
-        version = Reference.VERSION_NUMBER
-        //dependencies = "required-after:Forge@[7.7.1.665,);" +
-        //        "required-after:BuildCraft|Core;" +
-        //       "required-after:BuildCraft|Transport;" +
-        //        "required-after:BuildCraft|Builders;" +
-        //        "required-after:BuildCraft|Silicon;" +
-        //        "after:IC2;"
+        version = Reference.VERSION_NUMBER,
+        dependencies = "required-after:Forge@[7.7.1.665,);" +
+                "required-after:BuildCraft|Core;" +
+               "required-after:BuildCraft|Transport;" +
+                "required-after:BuildCraft|Builders;" +
+                "required-after:BuildCraft|Silicon;" +
+                "after:IC2;"
         )
 
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
