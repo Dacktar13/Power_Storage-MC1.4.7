@@ -45,7 +45,28 @@ import powerstorage.core.MercuryIngot;
 import powerstorage.factory.Condenser;
 import powerstorage.factory.MercuryCubeEmpty;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION_NUMBER)
+/**
+ * LetsMod
+ * 
+ * LetsMod
+ * 
+ * @author Dacktar
+ * @license Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * 
+ */
+
+@Mod(
+        modid = Reference.MOD_ID, 
+        name = Reference.MOD_NAME, 
+        version = Reference.VERSION_NUMBER
+        //dependencies = "required-after:Forge@[7.7.1.665,);" +
+        //        "required-after:BuildCraft|Core;" +
+        //       "required-after:BuildCraft|Transport;" +
+        //        "required-after:BuildCraft|Builders;" +
+        //        "required-after:BuildCraft|Silicon;" +
+        //        "after:IC2;"
+        )
+
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class PowerStorage {
 
@@ -57,6 +78,18 @@ public class PowerStorage {
 	@SidedProxy(clientSide = "powerstorage.client.ClientProxy", serverSide = "powerstorage.CommonProxy")
 	public static CommonProxy proxy;
 
+	 /***
+     * This is code that is executed prior to your mod being initialized into of Minecraft
+     * Examples of code that could be run here;
+     * 
+     * Initializing your items/blocks (you must do this here)
+     * Setting up your own custom logger for writing log data to
+     * Loading your language translations for your mod (if your mod has translations for other languages)
+     * Registering your mod's key bindings and sounds
+     * 
+     * @param event The Forge ModLoader pre-initialization event
+     */
+	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event) {
 		Configuration config = new Configuration(
@@ -104,7 +137,8 @@ public class PowerStorage {
 
 		mercuryPipe = buildcraft.BuildCraftTransport.createPipe(mercuryPipeID,
 				MercuryPipe.class, "mercuryConductivePipe", null, null, null);
-
+		
+		
 		condenser = new Condenser(condenserID, Material.iron)
 				.setHardness(10F).setResistance(10.0F)
 				.setStepSound(Block.soundGravelFootstep)
@@ -155,6 +189,18 @@ public class PowerStorage {
 
 	public static PSWorldGen worldGen = new PSWorldGen();
 
+	/***
+     * This is code that is executed when your mod is being initialized in Minecraft
+     * Examples of code that could be run here;
+     * 
+     * Registering your GUI Handler
+     * Registering your different event listeners
+     * Registering your different tile entities
+     * Adding in any recipes you have 
+     * 
+     * @param event The Forge ModLoader initialization event
+     */
+	
 	@Init
 	public void load(FMLInitializationEvent event) {
 		proxy.registerRenderers();
@@ -168,6 +214,14 @@ public class PowerStorage {
 
 	}
 
+	/***
+     * This is code that is executed after all mods are initialized in Minecraft
+     * This is a good place to execute code that interacts with other mods (ie, loads an addon module
+     * of your mod if you find a particular mod).
+     * 
+     * @param event The Forge ModLoader post-initialization event
+     */
+	
 	@PostInit
 	public void postInit(FMLPostInitializationEvent event) {
 		// Stub Method

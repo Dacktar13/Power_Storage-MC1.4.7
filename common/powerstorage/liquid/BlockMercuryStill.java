@@ -1,6 +1,5 @@
 package powerstorage.liquid;
 
-import powerstorage.CommonProxy;
 import powerstorage.PowerStorage;
 import net.minecraft.block.BlockStationary;
 import net.minecraft.block.material.Material;
@@ -24,11 +23,7 @@ public class BlockMercuryStill extends BlockStationary implements ILiquid {
 		return PowerStorage.mercuryModel;
 	}
 
-	@Override
-	public String getTextureFile() {
-		return CommonProxy.TEXTURE_BLOCKS;
-	}
-
+	
 	@Override
 	public int stillLiquidId() {
 		return PowerStorage.mercuryStill.blockID;

@@ -31,7 +31,7 @@ public class MercuryBucketHandler {
 		if ((blockID == PowerStorage.mercuryStill.blockID || blockID == PowerStorage.mercuryMoving.blockID)
 				&& world.getBlockMetadata(pos.blockX, pos.blockY, pos.blockZ) == 0) {
 
-			world.setBlockWithNotify(pos.blockX, pos.blockY, pos.blockZ, 0);
+			world.setBlock(pos.blockX, pos.blockY, pos.blockZ, 0);
 
 			return new ItemStack(PowerStorage.bucketMercury);
 		} else
